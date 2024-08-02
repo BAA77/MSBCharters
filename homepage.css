@@ -1,0 +1,2098 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(202, 202, 202);
+}
+
+/* Water Mark Removal */
+
+img[src="https://www.000webhost.com/static/default.000webhost.com/images/powered-by-000webhost.png"]
+{
+    display: none;
+}
+
+/* Reveal Section */
+
+section {
+    overflow: hidden;
+}
+
+.up-slide {
+    transform: translateY(200px);
+    transition: 0.8s all ease;
+    opacity: 0;
+}
+
+.up-slide-reveal {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.reveal {
+    transform: translate(50px, 200px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+.section-reveal {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.reveal-opp {
+    transform: translate(-50px, 200px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.section-reveal-opp {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+/* header/navigation bar */
+
+/* Preview Image */
+
+.preview-img {
+    display: none;
+}
+
+header {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    z-index: 8;
+    top: 0px;
+    left: 0px;
+    justify-content: space-between;
+    background-image: linear-gradient(45deg, #097268ef, rgba(245, 245, 245, 0.971), rgba(231, 231, 231, 0.957), #043632f4);
+}
+
+.nav-extremities {
+    min-width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-nav-menu-img {
+    margin: auto;
+    width: 110px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.header-wrap {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-wrap .phone {
+    width: 50vw;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1rem;
+    background-image: linear-gradient(90deg, #0dafa29e, #0984799e, #0436329e);
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-shadow: 0.4px 0.4px 1px black;
+    color: white;
+    border-radius: 13px;
+}
+
+.header-phone-number {
+    font-size: 21px;
+}
+
+.nav-wrap {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    width: 100vw;
+    padding: 0rem 0.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-ul {
+    height: 45px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-ul li {
+    margin: auto;
+    padding: 0.2rem 0.8rem;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 20px;
+    color: #043632;
+}
+
+.nav-list-item-active {
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgb(13, 13, 13);
+    cursor: pointer;
+}
+
+.nav-ul a {
+    display: block;
+    text-decoration: none;
+    color: #043632;
+}
+
+.nav-ul a:hover {
+    color: #0e988d;
+    transform: translateY(-2px);
+    transition: 0.1s;
+}
+
+.menu-toggle-bar-container {
+    visibility: hidden;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-toggle-bars-wrapper {
+    margin: auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.menu-toggle-bars {
+    position: relative;
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(214, 214, 214);
+}
+
+.menu-toggle-bars-on {
+    width: 25px;
+    transform: rotateZ(45deg);
+    transition: 0.3s;
+    background-color: rgb(214, 214, 214);
+}
+
+.menu-toggle-bars-on-alt {
+    width: 25px;
+    transform: rotateZ(-45deg);
+    transition: 0.3s;
+    top: -20%;
+    background-color: rgb(214, 214, 214);
+}
+
+.menu-toggle-bars-off {
+    top: 0%;
+    transform: rotateZ(0deg);
+    transition: 0.3s;
+}
+
+@media(max-width: 1150px) {
+    .header {
+        padding-top: 0.8rem;
+    }
+    .nav-extremities {
+        min-width: 80px;
+    }
+
+    #logo-nav-menu-img {
+        width: 75px;
+        height: 57px;
+    }
+
+    .header-wrap .phone {
+        width: 40vw;
+        gap: 0.5rem;
+        font-size: 17px;
+    }
+
+    .header-phone-number {
+        font-size: 18px;
+    }
+
+    .nav-ul {
+        gap: 1rem;
+    }
+
+    .nav-ul li {
+        padding: 0.2rem 0.7rem;
+        font-size: 19px;
+    }
+
+    .nav-list-item-active {
+        box-shadow: 1.5px 1.5px 4px rgb(13, 13, 13);
+    }
+}
+
+@media(max-width: 870px) {
+    header {
+        padding: 0.6rem 0.1rem;
+        background: #043632ec;
+    }
+    #logo-nav-menu-img {
+        width: 70px;
+        height: 33px;
+    }
+
+    .nav-extremities {
+        min-width: 60px;
+    }
+
+    .header-wrap .phone {
+        color: rgb(202, 202, 202);
+        width: auto;
+        gap: 0.3rem;
+        font-size: 16px;
+        background-color: transparent;
+        background-image: none;
+    }
+
+    .header-phone-number {
+        font-size: 17px;
+    }
+
+    .navigation {
+        width: 0vw;
+        height: 100vh;
+        position: absolute;
+        border-top-left-radius: 17px;
+        background-color: #043632;
+        box-shadow: -2.5px -2.5px 10px rgba(18, 18, 18, 0.717);
+        top: 0%;
+        right: 0%;
+        transition: all 0.8s;
+    }
+
+    .nav-ul {
+        margin-top: 80px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2.3rem;
+    }
+
+    .nav-ul a {
+        color: rgb(214, 214, 214);
+    }
+
+    .nav-ul li {
+        margin-right: 0px;
+        padding-top: 0.1rem;
+        padding-bottom: 0.1rem;
+        border-radius: 8px;
+    }
+
+    .nav-list-item-active {
+        background-color: rgb(214, 214, 214);
+        border: 2px solid rgb(214, 214, 214);
+        border-radius: 15px;
+        box-shadow: 2px 2px 5px rgb(0, 0, 0);
+        cursor: pointer;
+    }
+
+    .nav-ul .active-a-nav {
+        color: #043632;
+    }
+
+    .menu-toggle-bar-container {
+        height: 30px;
+        visibility: visible;
+    }
+}
+
+/* Landing page visuals */
+.landing-page-visuals-wrap {
+    color: rgb(215, 215, 215);
+    background-image: linear-gradient(90deg, whitesmoke, #043632);
+    height: 100vh;
+    padding-top: 23vh;
+}
+
+.background-img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background: url(msbCharterImg/Background\ Img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.landing-page-visuals-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    margin: auto;
+    right: 30vw;
+    width: 40vw;
+    text-align: center;
+}
+
+.landing-page-visuals-h1 {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 39px;
+    color: rgb(214, 214, 214);
+    text-shadow: 2px 2px 5px black;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.landing-page-visuals-text {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.landing-page-visuals-text div {
+    width: 15px;
+    height: 0px;
+    background-color: darkred;
+    transition: 0.5s;
+}
+
+.landing-page-visuals-text p {
+    visibility: hidden;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    text-shadow: 0.1px 0.1px 1px black;
+    color: rgba(245, 222, 179, 0.700);
+    border-radius: 15px;
+    background-color: white;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    padding: 0.5rem 0.3rem;
+    transition: all 1s;
+}
+
+@media(max-width: 1150px) {
+    .landing-page-visuals-wrap {
+        padding-top: 23vh;
+    }
+    
+    .landing-page-visuals-content {
+        gap: 0.5rem;
+        right: 20vw;
+        width: 60vw;
+    }
+    
+    .landing-page-visuals-h1 {
+        font-size: 33px;
+        color: rgb(214, 214, 214);
+    }
+    
+    .landing-page-visuals-text {
+        gap: 0.9rem;
+    }
+    
+    .landing-page-visuals-text div {
+        width: 10px;
+    }
+    
+    .landing-page-visuals-text p {
+        font-size: 19px;
+        border-radius: 12px;
+        color: rgba(0, 0, 0, 0.927);
+        padding: 0.5rem 0.5rem;
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+    }
+}
+
+@media(max-width: 685px) {
+    .landing-page-visuals-wrap {
+        padding-top: 18vh;
+    }
+    
+    .landing-page-visuals-content {
+        gap: 0.3rem;
+        right: 5vw;
+        width: 90vw;
+    }
+    
+    .landing-page-visuals-h1 {
+        font-size: 27px;
+    }
+    
+    .landing-page-visuals-text {
+        gap: 0.5rem;
+    }
+    
+    .landing-page-visuals-text p {
+        font-size: 18px;
+        border-radius: 10px;
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+    }
+}
+
+/* Welcome Note */
+.welcome-note-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #043632;
+    background-image: linear-gradient(180deg, #011b1e,  #011b1e, #043632, #043632, #043632, #043632,#043632,  rgb(202, 202, 202));
+    padding: 8rem 0rem 10rem 0rem;
+}
+
+.welcome-note-h2 {
+    width: 45vw;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 27px;
+    text-shadow: 1px 1px 3px black;
+    text-align: center;
+    margin: 0px auto;
+    color:  rgb(190, 190, 190);
+}
+
+.welcome-note-p {
+    color:  rgba(143, 143, 143);
+    width: 45vw;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
+}
+
+.welcome-note-p h3 {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 30px;
+    text-shadow: 0.2px 0.2px 1px;
+}
+
+.welcome-note-img {
+    width: 100%;
+    height: 30vh;
+    background: url(msbCharterImg/Ins47489819433_a2921b90769c4463aad4702cb7bc1db3_362324861_1499905347491650_5771179016826673643_n.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media(max-width: 1150px) {
+    .welcome-note-wrap {
+        gap: 2rem;
+    }
+    
+    .welcome-note-h2 {
+        width: 75vw;
+        font-size: 25px;
+    }
+    
+    .welcome-note-p {
+        width: 75vw;
+        font-size: 22px;
+    }
+    
+    .welcome-note-p h3 {
+        font-size: 28px;
+    }
+    
+    .welcome-note-img {
+        height: 25vh;
+    }
+}
+
+@media(max-width: 685px) {
+    .welcome-note-wrap {
+        gap: 1.8rem;
+        padding: 5rem 0rem 8rem 0rem;
+    }
+    
+    .welcome-note-h2 {
+        width: 95vw;
+        font-size: 22px;
+    }
+    
+    .welcome-note-p {
+        width: 95vw;
+        font-size: 21px;
+    }
+    
+    .welcome-note-p h3 {
+        font-size: 25px;
+    }
+    
+    .welcome-note-img {
+        height: 20vh;
+    }
+}
+
+/* Experience and Service */
+.experience-service {
+    padding: 7.5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    background-color: rgb(202, 202, 202);
+}
+
+.experience-service-top {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.experience-service-top::-webkit-scrollbar {
+    display: none;
+}
+
+.experience-service-top-wrap {
+    display: flex;
+}
+
+.experience-service-content {
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+}
+
+.experience-service-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.experience-service-img img {
+    width: 40vw;
+}
+
+.experience-service-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    width: 45vw;
+}
+
+.experience-service-text-subheading {
+    width: 40vw;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 25px;
+    text-align: left;
+    color: #043632;
+    margin: 0px auto;
+}
+
+.experience-service-text-paragraph {
+    width: 40vw;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    text-align: left;
+    margin: 0px auto;
+}
+
+.experience-service-base {
+    padding: 0rem 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.slide-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.slide-arrow-btn {
+    width: 59px;
+    height: 59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 4px solid #043632;
+    cursor: pointer;
+}
+
+.arrow-left {
+    width: 49px;
+    height: 49px;
+    border: 4px solid #0436326a;
+    cursor: auto;
+}
+
+.slide-arrow-btn i {
+    color: #043632;
+    font-size: 25px;
+}
+
+#fa-arrow-left {
+    color: #0436326a;
+}
+
+.slide-page-number {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 27px;
+}
+
+@media(max-width: 1150px) {
+    .experience-service {
+        padding: 5rem 0rem;
+        gap: 2rem;
+    }
+    
+    .experience-service-top {
+        width: 97%;
+    }
+    
+    .experience-service-content {
+        flex-direction: row-reverse;
+    }
+    
+    .experience-service-img {
+        width: 45%;
+    }
+    
+    .experience-service-img img {
+        width: 45vw;
+        border: none;
+    }
+    
+    .experience-service-text {
+        gap: 1rem;
+        width: 54vw;
+    }
+    
+    .experience-service-text-subheading {
+        width: 40vw;
+        font-size: 22px;
+        margin: 0px 0px;
+    }
+    
+    .experience-service-text-paragraph {
+        width: 48vw;
+        font-size: 22px;
+        margin: 0px 0px;
+    }
+    
+    .experience-service-base {
+        padding: 0rem 2.5rem;
+        justify-content: space-between;
+    }
+    
+    .slide-arrow {
+        gap: 1.5rem;
+    }
+    
+    .slide-page-number {
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 685px) {
+    .experience-service {
+        padding: 0.5rem 0rem;
+    }
+    
+    .experience-service-top {
+        width: 100%;
+    }
+    
+    .experience-service-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .experience-service-img {
+        width: 100%;
+    }
+    
+    .experience-service-img img {
+        width: 95vw;
+    }
+    
+    .experience-service-text {
+        gap: 1rem;
+        width: 100%;
+    }
+    
+    .experience-service-text-subheading {
+        width: 85vw;
+        font-size: 19px;
+        text-align: center;
+        margin: 0px auto;
+    }
+    
+    .experience-service-text-paragraph {
+        width: 90vw;
+        font-size: 21px;
+        text-align: center;
+        margin: 0px auto;
+    }
+    
+    .slide-arrow {
+        gap: 1.3rem;
+    }
+    
+    .slide-page-number {
+        font-size: 24px;
+    }
+}
+
+/* Client Experience */
+
+.meet-team-wrap {
+    margin-bottom: 1rem;
+    padding: 7rem 0rem 7rem 0rem;
+    background-image: linear-gradient(180deg, #043632, rgb(90, 90, 90), rgb(202, 202, 202));
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.meet-team-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    width: 40vw;
+}
+
+.meet-team-text-h2 {
+    width: 40vw;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 25px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.820);
+    margin: 0px auto;
+}
+
+.meet-team-text-p{
+    width: 40vw;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.meet-team-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+}
+
+.meet-team-img img {
+    box-shadow: 4px 4px 17px black;
+    width: 40vw;
+}
+
+@media (max-width: 1150px) {
+    .meet-team-wrap {
+        padding: 5rem 0rem 4rem 0rem;
+    }
+    
+    .meet-team-text {
+        gap: 1rem;
+        width: 45vw;
+    }
+    
+    .meet-team-text-h2 {
+        width: 45vw;
+        font-size: 22px;
+    }
+    
+    .meet-team-text-p{
+        width: 45vw;
+        font-size: 22px;
+    }
+    
+    .meet-team-img {
+        width: 40vw;
+    }
+    
+    .meet-team-img img {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 685px) {
+    .meet-team-wrap {
+        margin-top: 3.5rem;
+        padding: 3rem 0rem 3rem 0rem;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .meet-team-text {
+        width: 90vw;
+    }
+    
+    .meet-team-text-h2 {
+        width: 90vw;
+        font-size: 20px;
+    }
+    
+    .meet-team-text-p{
+        width: 90vw;
+        font-size: 21px;
+    }
+    
+    .meet-team-img {
+        width: 90vw;
+    }
+    
+    .meet-team-img img {
+        width: 90vw;
+    }
+}
+
+/* Our Yacht Fleet */
+.our-yachts-wrap {
+    background-color: #043632;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgb(202, 202, 202);
+}
+
+.our-yachts-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.our-yachts-text-h2 {
+    width: 30vw;
+    color: rgb(156, 156, 156);
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.our-yachts-text p {
+    width: 30vw;
+    color: rgba(156, 156, 156, 0.899);
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.our-yachts-card {
+    border-left: 5px solid rgb(202, 202, 202);
+    padding: 3rem 0rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+    justify-content: center;
+    align-items: center;
+    background: url(msbCharterImg/our\ fleet.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.our-yachts-card-h3 {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 27px;
+    text-shadow: 0.1px 0.1px 0.5px grey;
+}
+
+.our-yachts-card-p {
+    width: 45vw;
+    color: rgb(176, 176, 176);
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 0.3px 0.3px 0.5px black;
+    background: transparent;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+
+.our-yachts-card-btn {
+    width: 210px;
+    cursor: pointer;
+    box-shadow: 4px 4px 5px black;
+    border: 4px solid whitesmoke;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    padding: 0.5rem 0rem;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.our-yachts-card-btn:hover {
+    border: 4px solid black;
+}
+
+.our-yachts-card-btn a {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    text-decoration: none;
+    color: rgb(214, 214, 214);
+}
+
+@media(max-width: 1150px) {
+    .our-yachts-wrap {
+        border: 5px solid rgb(202, 202, 202);
+    }
+    
+    .our-yachts-text {
+        gap: 1.5rem;
+    }
+    
+    .our-yachts-text-h2 {
+        width: 40vw;
+        font-size: 21px;
+    }
+    
+    .our-yachts-text p {
+        width: 40vw;
+        font-size: 22px;
+    }
+    
+    .our-yachts-card {
+        border-left: 5px solid rgb(202, 202, 202);
+        padding: 3rem 0rem;
+        gap: 3.5rem;
+    }
+    
+    .our-yachts-card-h3 {
+        font-size: 25px;
+    }
+    
+    .our-yachts-card-p {
+        width: 45vw;
+        font-size: 22px;
+    }
+    
+    .our-yachts-card-btn {
+        width: 200px;
+        border-radius: 17px;
+        padding: 0.4rem 0rem;
+        border: 3px solid whitesmoke;
+    }
+
+    .our-yachts-card-btn:hover {
+        border: 3px solid black;
+    }
+    
+    .our-yachts-card-btn a {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 685px) {
+    .our-yachts-wrap {
+        margin-top: 3rem;
+        background-color: rgb(202, 202, 202);
+        flex-direction: column;
+        border: none;
+    }
+    
+    .our-yachts-text {
+        border-top-left-radius: 17px;
+        border-top-right-radius: 17px;
+        background-color: #043632;
+        padding: 2.5rem 0rem 4rem 0rem;
+        width: 95%;
+        gap: 1.5rem;
+    }
+    
+    .our-yachts-text-h2 {
+        width: 90vw;
+        font-size: 19px;
+        text-align: center;
+    }
+    
+    .our-yachts-text p {
+        width: 90vw;
+        font-size: 21px;
+        text-align: center;
+    }
+    
+    .our-yachts-card {
+        border-bottom-left-radius: 17px;
+        border-bottom-right-radius: 17px;
+        width: 95%;
+        border-left: none;
+        padding: 3rem 0rem;
+        gap: 3.5rem;
+    }
+    
+    .our-yachts-card-h3 {
+        font-size: 23px;
+    }
+    
+    .our-yachts-card-p {
+        width: 90vw;
+        font-size: 22px;
+    }
+    
+    .our-yachts-card-btn {
+        padding: 0.5rem 0rem;
+        border: 2px solid whitesmoke;
+    }
+
+    .our-yachts-card-btn:hover {
+        border: 2px solid black;
+    }
+    
+    .our-yachts-card-btn a {
+        font-size: 19px;
+    }
+}
+
+/* Browse Gallery */
+
+.gallery {
+    background: linear-gradient(90deg, #04363262, rgb(190, 190, 190), rgb(190, 190, 190), #04363262);
+    padding: 4rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-h2 {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 29px;
+    color: #043632;
+}
+
+.galler-image-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.gallery-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-img-wrap {
+    background: #04363226;
+    border-radius: 9px;
+    box-shadow: 5px 5px 17px black;
+    width: 90%;
+    overflow: auto;
+    scroll-behavior: smooth;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.gallery-img-wrap::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-img {
+    width: 35vw;
+    padding: 1.5rem 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-img img {
+    width: 35vw;
+    box-shadow: 3px 3px 17px black;
+    transition: 0.3s;
+}
+
+.gallery-img img:hover {
+    transform: scale(1.2);
+}
+
+.gallery-controls {
+    display: flex;
+    padding: 0rem 8rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery-controls-icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.gallery-controls-icon {
+    cursor: pointer;
+    display: flex;
+    font-size: 28px;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    color: rgba(0, 0, 0, 0.786);
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+.gallery-controls-con-left {
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.786);
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1150px) {
+    .gallery {
+        padding: 4rem 0rem 3rem 0rem;
+        gap: 2rem;
+    }
+    
+    .gallery-h2 {
+        font-size: 25px;
+    }
+    
+    .galler-image-box {
+        gap: 1.5rem;
+    }
+    
+    .gallery-img-wrap {
+        width: 95%;
+        gap: 2rem;
+    }
+    
+    .gallery-img {
+        width: 40vw;
+        padding: 1.5rem 2rem;
+    }
+    
+    .gallery-img img {
+        width: 40vw;
+    }
+    
+    .gallery-controls {
+        padding: 0rem 8rem;
+    }
+    
+    .gallery-controls-icon-wrap {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 685px) {
+    .gallery {
+        margin-top: 3rem;
+        padding: 3.5rem 0rem 3rem 0rem;
+        gap: 2rem;
+    }
+    
+    .gallery-h2 {
+        font-size: 22px;
+    }
+    
+    .galler-image-box {
+        gap: 1.5rem;
+    }
+    
+    .gallery-img-wrap {
+        border-radius: 0px;
+        width: 100%;
+        gap: 1rem;
+    }
+    
+    .gallery-img {
+        width: 70vw;
+        padding: 1rem 1rem;
+    }
+    
+    .gallery-img img {
+        width: 70vw;
+    }
+    
+    .gallery-controls {
+        padding: 0rem 3rem;
+    }
+    
+    .gallery-controls-icon-wrap {
+        gap: 1rem;
+    }
+}
+
+/* Dinstinction */
+.distinction-wrap {
+    margin: 0.3rem 0rem;
+    background: url(msbCharterImg/distnc-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.distinction-container {
+    padding: 2rem 0rem 4rem 0rem;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.distinction-h2 {
+    width: 75%;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 25px;
+    text-align: center;
+    color: rgba(222, 222, 222, 0.844);
+    text-shadow: 0.3px 0.3px 0.5px black;
+}
+
+.distinction-card-wrap {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.distinction-card {
+    width: 25vw;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.distinction-card i {
+    font-size: 50px;
+    color: #1cc4b6;
+}
+
+.distinstion-h3 {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
+    color: #1cc4b6;
+    text-shadow: 0.3px 0.3px 0.5px black;
+}
+
+.distinction-p {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
+    color: rgb(222, 222, 222);
+}
+
+@media(max-width: 1150px) {
+    .distinction-wrap {
+        margin: 0.3rem 0rem;
+    }
+
+    .distinction-container {
+        padding: 3rem 0rem 8rem 0rem;
+        gap: 3rem;
+    }
+    
+    .distinction-h2 {
+        font-size: 22px;
+    }
+    
+    .distinction-card-wrap {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .distinction-card {
+        width: 35vw;
+        height: auto;
+    }
+    
+    .distinction-card i {
+        font-size: 45px;
+    }
+    
+    .distinstion-h3 {
+        font-size: 20px;
+    }
+    
+    .distinction-p {
+        font-size: 22px;
+    }
+}
+
+@media(max-width: 685px) {
+    .distinction-wrap {
+        margin: 0.2rem 0rem;
+    }
+
+    .distinction-container {
+        padding: 2rem 0rem 6rem 0rem;
+    }
+    
+    .distinction-h2 {
+        font-size: 20px;
+    }
+    
+    .distinction-card {
+        width: 70vw;
+    }
+    
+    .distinction-card i {
+        font-size: 35px;
+    }
+    
+    .distinstion-h3 {
+        font-size: 17px;
+    }
+    
+    .distinction-p {
+        font-size: 21px;
+    }
+}
+
+/* Rent a Yacht */
+.rent-yacht-wrap {
+    background: linear-gradient(180deg, #043632aa, rgba(0, 0, 0, 0.665), rgb(202,202,202));
+    padding: 7.5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.rent-yacht-top {
+    width: 100%;
+    display: flex;
+}
+
+.rent-yacht-top-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.rent-yacht-top-img img {
+    width: 40vw;
+}
+
+.rent-yacht-top-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    justify-content: center;
+    width: 45vw;
+}
+
+.rent-yacht-top-text-h2 {
+    width: 40vw;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 25px;
+    text-align: left;
+    color: rgb(215, 215, 215);
+    text-shadow: 3px 3px 5px black;
+    margin: 0px auto;
+}
+
+.rent-yacht-top-text-p {
+    width: 40vw;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    text-align: left;
+    margin: 0px auto;
+    color: rgb(215, 215, 215);
+}
+
+.rent-yacht-base {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.rent-yacht-base-h3 {
+    width: 50vw;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 31px;
+    text-align: center;
+    text-shadow: 2px 2px 5px grey;
+}
+
+.rent-yacht-base-btn {
+    box-shadow: 2px 2px 5px black;
+    padding: 0.3rem 4rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    text-align: left;
+    text-decoration: none;
+    color: rgb(202, 202, 202);
+    display: flex;
+    gap: 1rem;
+    background-color:  #06514b;
+    border-radius: 7px;
+    transition: 0.1s;
+}
+
+#rent-yacht-text-btn-icon {
+    font-size: 23px;
+    color: rgb(227, 227, 227);
+}
+
+.rent-yacht-base-btn:hover {
+    background-color: #043632;
+}
+
+@media(max-width: 1150px) {
+    .rent-yacht-wrap {
+        padding: 4.5rem 0rem;
+        gap: 5rem;
+    }
+    
+    .rent-yacht-top {
+        width: 97%;
+        margin: 0px auto;
+    }
+    
+    .rent-yacht-top-img {
+        width: 45%;
+    }
+    
+    .rent-yacht-top-img img {
+        width: 45vw;
+    }
+    
+    .rent-yacht-top-text {
+        gap: 1rem;
+        width: 54vw;
+    }
+    
+    .rent-yacht-top-text-h2 {
+        width: 45vw;
+        font-size: 22px;
+    }
+    
+    .rent-yacht-top-text-p {
+        width: 45vw;
+        font-size: 22px;
+        margin: 1rem auto;
+    }
+    
+    .rent-yacht-base {
+        gap: 1.5rem;
+    }
+    
+    .rent-yacht-base-h3 {
+        width: 70vw;
+        font-size: 28px;
+    }
+    
+    .rent-yacht-base-btn {
+        padding: 0.25rem 3rem;
+        font-size: 23px;
+        border-radius: 9px;
+    }
+
+    #rent-yacht-text-btn-icon {
+        font-size: 20px;
+        color: rgb(227, 227, 227);
+    }
+}
+
+@media(max-width: 685px) {
+    .rent-yacht-wrap {
+        padding: 3.5rem 0rem;
+        gap: 3.5rem;
+    }
+    
+    .rent-yacht-top {
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+    }
+    
+    .rent-yacht-top-img {
+        margin: 0px auto;
+        width: 95vw;
+    }
+    
+    .rent-yacht-top-img img {
+        width: 95vw;
+    }
+    
+    .rent-yacht-top-text {
+        gap: 0rem;
+        width: 100%;
+    }
+    
+    .rent-yacht-top-text-h2 {
+        width: 85vw;
+        font-size: 19px;
+        text-align: center;
+    }
+    
+    .rent-yacht-top-text-p {
+        width: 90vw;
+        font-size: 21px;
+        text-align: center;
+    }
+    
+    .rent-yacht-base {
+        gap: 1rem;
+    }
+    
+    .rent-yacht-base-h3 {
+        width: 90vw;
+        font-size: 25px;
+    }
+    
+    .rent-yacht-base-btn {
+        padding: 0.25rem 2rem;
+        font-size: 21.5px;
+        border-radius: 9px;
+    }
+
+    #rent-yacht-text-btn-icon {
+        font-size: 19px;
+        color: rgb(227, 227, 227);
+    }
+}
+
+/* Learn More */
+
+.learn-m {
+    margin: 7rem 0rem 5rem 0rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.learn-m-img {
+    width: 45vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.learn-m-img img {
+    width: 45vw;
+    opacity: 0.8;
+}
+
+.learn-m-text {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.learn-m-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 33px;
+}
+
+.learn-m-btn {
+    font-size: 24px;
+}
+
+.learn-m-btn a {
+    padding: 0.3rem 3rem;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.96);
+    text-decoration: none;
+    color: whitesmoke;
+    transition: 0.3s;
+    box-shadow: 2px 2px 7px black;
+}
+
+.learn-m-btn a:hover {
+    background-color: rgba(0, 0, 0, 0.826);
+}
+
+@media (max-width: 1150px) {
+    .learn-m {
+        margin: 5rem 0rem 4rem 0rem;
+    }
+    
+    .learn-m-img {
+        width: 45vw;
+    }
+    
+    .learn-m-img img {
+        width: 45vw;
+    }
+    
+    .learn-m-text {
+        width: 40vw;
+        gap: 2rem;
+    }
+    
+    .learn-m-p {
+        font-size: 27px;
+    }
+    
+    .learn-m-btn {
+        font-size: 22px;
+    }
+    
+    .learn-m-btn a {
+        padding: 0.2rem 2rem;
+    }
+}
+
+@media (max-width: 685px) {
+    .learn-m {
+        margin: 5rem 0rem 2rem 0rem;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .learn-m-img {
+        width: 90vw;
+    }
+    
+    .learn-m-img img {
+        width: 90vw;
+    }
+    
+    .learn-m-text {
+        width: 90vw;
+        gap: 1.5rem;
+    }
+    
+    .learn-m-p {
+        font-size: 27px;
+    }
+    
+    .learn-m-btn {
+        font-size: 21px;
+    }
+    
+    .learn-m-btn a {
+        padding: 0.2rem 1.5rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-image: linear-gradient(180deg, rgb(202, 202, 202), #087168, #06524b, #043632, #043632);
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 7.5rem 0rem 2rem 2rem;
+    color: white;
+}
+.footer-hr {
+    display: none;
+}
+.footer-top {
+    display: flex;
+    justify-content: space-evenly;
+}
+.foot-top-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+}
+.footer-top-h3 {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 23px;
+    color: rgba(192, 192, 192, 0.916);
+}
+.footer-top-newsletter-social-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.footer-top-newsletter-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.footer-top-p {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 23px;
+}
+.footer-top-social {
+    display: flex;
+    gap: 2rem;
+}
+.footer-top-social-icon i {
+    font-size: 30.5px;
+    color: black;
+    cursor: pointer;
+}
+.footer-top-email-input {
+    padding: 0px 15px;
+    width: 500px;
+    height: 59px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 9px;
+}
+
+.email-input input {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+    padding: 0px;
+    outline: none;
+    border: none;
+    width: 420px;
+    height: 50px;
+    background-color: transparent;
+    color: whitesmoke;
+}
+::-webkit-input-placeholder {
+    color: rgb(214, 214, 214);
+}
+.email-input-icon {
+    background-color: transparent;
+    border: none;
+}
+.email-input-icon i {
+    font-size: 23.5px;
+    color: black;
+    cursor: pointer;
+}
+.footer-top-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.footer-top-contact-info-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+}
+.footer-top-contact-info-content {
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
+    align-items: center;
+}
+.footer-top-contact-info-icon i {
+    cursor: pointer;
+    font-size: 20.5px;
+    color: rgba(202, 202, 202, 0.855);
+}
+.contact-info-p {
+    cursor: pointer;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 21px;
+}
+
+.contact-info-p a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.footer-base {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 21px;
+}
+.footer-base-link {
+    display: flex;
+    gap: 1.5rem;
+}
+.footer-base-para p {
+    cursor: pointer;
+}
+.footer-base-para-divider {
+    width: 2px;
+    height: 25px;
+    border: none;
+    background-color: grey;
+}
+
+@media (max-width: 1150px) {
+    footer {
+        margin-top: 0rem;
+        gap: 3rem;
+        padding: 7rem 0rem 2.5rem 0rem;
+    }
+    .footer-hr {
+        width: 90vw;
+        height: 0.8px;
+        margin-bottom: 0.8rem;
+    }
+    .footer-top {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .foot-top-wrap {
+        gap: 1.3rem;
+    }
+    .footer-top-h3 {
+        font-size: 22px;
+    }
+    .footer-top-newsletter-social-container {
+        gap: 1rem;
+    }
+    .footer-top-newsletter-social {
+        flex-direction: column-reverse;
+        gap: 1.3rem;
+        justify-content: start;
+        align-items: flex-start;
+    }
+    .footer-top-p {
+        width: 280px;
+        font-size: 21px;
+    }
+    .footer-top-social {
+        gap: 2rem;
+    }
+    .footer-top-social-icon i {
+        font-size: 26px;
+    }
+    .footer-top-email-input {
+        padding: 0px 15px;
+        width: 300px;
+        height: 45px;
+        border: 0.5px solid black;
+        border-radius: 9px;
+    }
+    .email-input input {
+        font-size: 21px;
+        width: 240px;
+        height: 40px;
+    }
+    .email-input-icon i {
+        font-size: 20px;
+    }
+    .footer-top-contact-info {
+        gap: 1.5rem;
+    }
+    .footer-top-contact-info-wrap {
+        gap: 1.3rem;
+    }
+    .footer-top-contact-info-content {
+        gap: 0.8rem;
+    }
+    .footer-top-contact-info-icon i {
+        font-size: 20px;
+    }
+    .contact-info-p {
+        font-size: 20px;
+    }
+    .footer-base {
+        gap: 1rem;
+        font-size: 20px;
+    }
+    .footer-base-link {
+        gap: 0.8rem;
+    }
+    .footer-base-para-divider {
+        width: 2px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 685px) {
+    footer {
+        margin-top: 0rem;
+        gap: 2.5rem;
+        padding: 10.5rem 1rem 1.5rem 1rem;
+    }
+
+    .footer-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 2.5rem;
+    }
+    .foot-top-wrap {
+        gap: 2rem;
+    }
+    .footer-top-h3 {
+        font-size: 20px;
+    }
+    .footer-top-newsletter-social-container {
+        gap: 0.5rem;
+    }
+    .footer-top-newsletter-social {
+        gap: 1.5rem;
+        justify-content: start;
+        align-items: flex-start;
+    }
+    .footer-top-p {
+        max-width: 90vw;
+        font-size: 20px;
+    }
+    .footer-top-social {
+        gap: 3rem;
+    }
+    .footer-top-social-icon i {
+        font-size: 24px;
+    }
+    .footer-top-email-input {
+        padding: 0px 13px;
+        width: 280px;
+        height: 40px;
+        border: 0.4px solid black;
+    }
+    .email-input input {
+        font-size: 19px;
+        width: 220px;
+        height: 35px;
+    }
+    .email-input-icon i {
+        font-size: 18px;
+    }
+    .footer-top-contact-info {
+        gap: 2rem;
+        justify-content: center;
+    }
+    .footer-top-contact-info-wrap {
+        max-width: 80vw;
+        gap: 1rem;
+    }
+    .footer-top-contact-info-content {
+        gap: 0.5rem;
+    }
+    .footer-top-contact-info-icon i {
+        font-size: 16px;
+    }
+    .contact-info-p {
+        font-size: 20px;
+    }
+    .footer-base {
+        gap: 1rem;
+        font-size: 18px;
+    }
+    .footer-base-link {
+        width: 90vw;
+        gap: 0.5rem;
+    }
+    .footer-base-para{
+        justify-content: start;
+        align-items: flex-start;
+    }
+    .footer-base-para-divider {
+        width: 2px;
+        height: 18px;
+    }
+}

@@ -1,0 +1,1263 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(202, 202, 202);
+}
+
+/* Water Mark Removal */
+
+img[src="https://www.000webhost.com/static/default.000webhost.com/images/powered-by-000webhost.png"]
+{
+    display: none;
+}
+
+/* header/navigation bar */
+
+/* Preview Image */
+
+.preview-img {
+    display: none;
+}
+
+header {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    z-index: 8;
+    top: 0px;
+    left: 0px;
+    justify-content: space-between;
+    background-image: linear-gradient(45deg, #097268ef, rgba(245, 245, 245, 0.971), rgba(231, 231, 231, 0.957), #043632f4);
+}
+
+.nav-extremities {
+    min-width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-nav-menu-img {
+    margin: auto;
+    width: 110px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.header-wrap {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-wrap .phone {
+    width: 50vw;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1rem;
+    background-image: linear-gradient(90deg, #0dafa29e, #0984799e, #0436329e);
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-shadow: 0.4px 0.4px 1px black;
+    color: white;
+    border-radius: 13px;
+}
+
+.header-phone-number {
+    font-size: 21px;
+}
+
+.nav-wrap {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    width: 100vw;
+    padding: 0rem 0.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-ul {
+    height: 45px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-ul li {
+    margin: auto;
+    padding: 0.2rem 0.8rem;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 20px;
+    color: #043632;
+}
+
+.nav-list-item-active {
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgb(13, 13, 13);
+    cursor: pointer;
+}
+
+.nav-ul a {
+    display: block;
+    text-decoration: none;
+    color: #043632;
+}
+
+.nav-ul a:hover {
+    color: #0e988d;
+    transform: translateY(-2px);
+    transition: 0.1s;
+}
+
+.menu-toggle-bar-container {
+    visibility: hidden;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-toggle-bars-wrapper {
+    margin: auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.menu-toggle-bars {
+    position: relative;
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(214, 214, 214);
+}
+
+.menu-toggle-bars-on {
+    width: 25px;
+    transform: rotateZ(45deg);
+    transition: 0.3s;
+    background-color: rgb(214, 214, 214);
+}
+
+.menu-toggle-bars-on-alt {
+    width: 25px;
+    transform: rotateZ(-45deg);
+    transition: 0.3s;
+    top: -20%;
+    background-color: rgb(214, 214, 214);
+}
+
+.menu-toggle-bars-off {
+    top: 0%;
+    transform: rotateZ(0deg);
+    transition: 0.3s;
+}
+
+@media(max-width: 1150px) {
+    .header {
+        padding-top: 0.8rem;
+    }
+    .nav-extremities {
+        min-width: 80px;
+    }
+
+    #logo-nav-menu-img {
+        width: 75px;
+        height: 57px;
+    }
+
+    .header-wrap .phone {
+        width: 40vw;
+        gap: 0.5rem;
+        font-size: 17px;
+    }
+
+    .header-phone-number {
+        font-size: 18px;
+    }
+
+    .nav-ul {
+        gap: 1rem;
+    }
+
+    .nav-ul li {
+        padding: 0.2rem 0.7rem;
+        font-size: 19px;
+    }
+
+    .nav-list-item-active {
+        box-shadow: 1.5px 1.5px 4px rgb(13, 13, 13);
+    }
+}
+
+@media(max-width: 870px) {
+    header {
+        padding: 0.6rem 0.1rem;
+        background: #043632ec;
+    }
+    #logo-nav-menu-img {
+        width: 70px;
+        height: 33px;
+    }
+
+    .nav-extremities {
+        min-width: 60px;
+    }
+
+    .header-wrap .phone {
+        color: rgb(202, 202, 202);
+        width: auto;
+        gap: 0.3rem;
+        font-size: 16px;
+        background-color: transparent;
+        background-image: none;
+    }
+
+    .header-phone-number {
+        font-size: 17px;
+    }
+
+    .navigation {
+        width: 0vw;
+        height: 100vh;
+        position: absolute;
+        border-top-left-radius: 17px;
+        background-color: #043632;
+        box-shadow: -2.5px -2.5px 10px rgba(18, 18, 18, 0.717);
+        top: 0%;
+        right: 0%;
+        transition: all 0.8s;
+    }
+
+    .nav-ul {
+        margin-top: 80px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2.3rem;
+    }
+
+    .nav-ul a {
+        color: rgb(214, 214, 214);
+    }
+
+    .nav-ul li {
+        margin-right: 0px;
+        padding-top: 0.1rem;
+        padding-bottom: 0.1rem;
+        border-radius: 8px;
+    }
+
+    .nav-list-item-active {
+        background-color: rgb(214, 214, 214);
+        border: 2px solid rgb(214, 214, 214);
+        border-radius: 15px;
+        box-shadow: 2px 2px 5px rgb(0, 0, 0);
+        cursor: pointer;
+    }
+
+    .nav-ul .active-a-nav {
+        color: #043632;
+    }
+
+    .menu-toggle-bar-container {
+        height: 30px;
+        visibility: visible;
+    }
+}
+
+/* Booking form */
+
+.booking-form-container {
+    display: none;
+    background: url(msbCharterImg/Background\ Img.png);
+    background-size: cover;
+    background-position: center;
+    padding: 7rem 0rem 15rem 0rem;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 70vw;
+    margin: auto;
+    padding: 3rem 2rem 5rem 2rem;
+    background: transparent;
+    backdrop-filter: blur(70px);
+    -webkit-backdrop-filter: blur(70px);
+    border-radius: 30px;
+}
+
+.booking-form-h3 {
+    width: 50vw;
+    text-align: center;
+    margin: auto;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 27.5px;
+    color: rgba(0, 0, 0, 0.907);
+}
+
+.booking-form-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.booking-form-input-pairs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.booking-form-input {
+    width: 22.5vw;
+}
+
+.booking-form-input label {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 23.5px;
+    color: black;
+}
+
+.booking-form-input input {
+    width: 22.5vw;
+    background-color: transparent;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-bottom: 2px solid rgb(21, 21, 21);
+    color: rgb(202, 202, 202);
+    padding: 0.4rem 0.3rem;
+    margin-top: 0.1rem;
+}
+
+.booking-form-input input:focus {
+    border: none;
+    border-bottom: 2px solid rgb(202, 202, 202);
+}
+
+.booking-form-btn {
+    width: 18vw;
+    margin: auto;
+}
+
+.bk-form-button {
+    border-radius: 10px;
+    border: none;
+    width: 18vw;
+    height: auto;
+    padding: 0.3rem 2rem;
+    cursor: pointer;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22.5px;
+    background-color: black;
+    color: whitesmoke;
+    box-shadow: 2px 2px 5px black;
+}
+
+.bk-form-button:hover {
+    background-color: rgb(1, 2, 20);
+}
+
+@media (max-width: 1150px) {
+    
+    .booking-form-container {
+        padding: 7rem 0rem 10rem 0rem;
+    }
+    
+    .booking-form {
+        gap: 5rem;
+        width: 90vw;
+        padding: 2.5rem 3rem 6rem 3rem;
+        border-radius: 25px;
+    }
+    
+    .booking-form-h3 {
+        width: 70vw;
+        font-size: 24px;
+    }
+    
+    .booking-form-wrap {
+        gap: 4rem;
+    }
+
+    .booking-form-input-pairs {
+        justify-content: space-between;
+    }
+    
+    .booking-form-input {
+        width: 32vw;
+    }
+    
+    .booking-form-input label {
+        font-size: 22px;
+    }
+    
+    .booking-form-input input {
+        width: 32vw;
+        font-size: 20px;
+        border-bottom: 1px solid rgb(21, 21, 21);
+        padding: 0.3rem 0.2rem;
+        margin-top: 0.2rem;
+    }
+    
+    .booking-form-input input:focus {
+        border-bottom: 1px solid rgb(202, 202, 202);
+    }
+    
+    .booking-form-btn {
+        width: 30vw;
+    }
+    
+    .bk-form-button {
+        margin-top: 2rem;
+        border-radius: 9px;
+        width: 30vw;
+        padding: 0.35rem 2rem;
+        font-size: 20.5px;
+    }
+}
+
+@media (max-width: 685px) {
+
+    .booking-form-container {
+        padding: 3.5rem 0rem 10rem 0rem;
+    }
+    
+    .booking-form {
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        gap: 3.5rem;
+        width: 100%;
+        padding: 2rem 2rem 5rem 2rem;
+        border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .booking-form-h3 {
+        width: 90%;
+        font-size: 22px;
+    }
+    
+    .booking-form-wrap {
+        gap: 3.5rem;
+    }
+
+    .booking-form-input-pairs {
+        flex-direction: column;
+        gap: 3.5rem;
+        justify-content: center;
+    }
+    
+    .booking-form-input {
+        width: 90vw;
+    }
+    
+    .booking-form-input label {
+        font-size: 22px;
+    }
+    
+    .booking-form-input input {
+        width: 90vw;
+        font-size: 19.5px;
+        padding: 0.2rem 0.2rem;
+        margin-top: 0.3rem;
+    }
+    
+    .booking-form-btn {
+        width: 50vw;
+    }
+    
+    .bk-form-button {
+        margin-top: 2rem;
+        border-radius: 8px;
+        width: 50vw;
+        padding: 0.4rem 2rem;
+        font-size: 20px;
+    }
+}
+
+/* Rent a Yacht */
+
+.rent-a-yacht {
+    color: rgb(157, 157, 157);
+    background-image: linear-gradient(180deg, #011b1e, #043632, #043632, #043632, rgb(202, 202, 202));
+    padding: 8rem 0rem;
+    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.rent-a-yacht-h2 {
+    width: 50vw;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 25px;
+    text-align: center;
+    color: rgb(202, 202, 202);
+}
+
+.rent-a-yacht-p {
+    width: 50vw;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
+}
+
+@media (max-width: 1150px) {
+    .rent-a-yacht {
+        padding: 7rem 0rem 8rem 0rem;
+        gap: 0.8rem;
+    }
+    
+    .rent-a-yacht-h2 {
+        width: 70vw;
+        font-size: 22px;
+    }
+    
+    .rent-a-yacht-p {
+        width: 70vw;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 685px) {
+    .rent-a-yacht {
+        padding: 6rem 0rem 8rem 0rem;
+        gap: 1rem;
+    }
+    
+    .rent-a-yacht-h2 {
+        width: 90vw;
+        font-size: 20px;
+    }
+    
+    .rent-a-yacht-p {
+        width: 90vw;
+        font-size: 21px;
+    }
+}
+
+/* Yacht Fleet */
+
+.yacht-fleet-container {
+    padding-bottom: 9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+.yacht-fleet-wrap {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.yacht-fleet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.yacht-fleet-img img {
+    width: 35vw;
+    border: 3px solid transparent;
+}
+
+.yacht-fleet-img img:hover {
+    border: 3px solid #087168;
+}
+
+.yacht-fleet-details {
+    padding: 0.2rem 0rem 0.5rem 0rem;
+    width: 35vw;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: rgb(152, 152, 152);
+}
+
+.yacht-fleet-details-name {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 19px;
+    text-align: center;
+    color: #043632;
+}
+
+.yacht-fleet-details-data {
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+}
+
+.yacht-fleet-data {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.yacht-fleet-data i {
+    font-size: 25px;
+    color: #043632;
+}
+
+.yacht-fleet-data-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.yacht-fleet-data-text h4 {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.yacht-fleet-data-text p {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 19px;
+}
+
+.yacht-fleet-data-distinction {
+    width: 3px;
+    height: 15px;
+    margin: auto;
+    background-color: black;
+}
+
+.yacht-fleet-btn {
+    margin-top: 2rem;
+}
+
+.yacht-fleet-btn button {
+    border-radius: 10px;
+    border: none;
+    width: auto;
+    height: auto;
+    padding: 0.4rem 4rem;
+    cursor: pointer;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22.5px;
+    background-color: #043632;
+    color: whitesmoke;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.916);
+}
+
+.yacht-fleet-btn button:hover {
+    background-color: black;
+}
+
+@media (max-width: 1150px) {
+    .yacht-fleet-container {
+        padding-bottom: 5rem;
+        gap: 6rem;
+    }
+    
+    .yacht-fleet-img img {
+        width: 43vw;
+        border: 2px solid transparent;
+    }
+    
+    .yacht-fleet-img img:hover {
+        border: 2px solid #087168;
+    }
+    
+    .yacht-fleet-details {
+        width: 43vw;
+    }
+    
+    .yacht-fleet-details-name {
+        font-size: 14px;
+    }
+    
+    .yacht-fleet-details-data {
+        padding: 0rem 0.5rem;
+    }
+    
+    .yacht-fleet-data {
+        gap: 0.5rem;
+    }
+    
+    .yacht-fleet-data i {
+        font-size: 16px;
+    }
+    
+    .yacht-fleet-data-text {
+        gap: 0.5rem;
+    }
+    
+    .yacht-fleet-data-text h4 {
+        font-size: 13.5px;
+    }
+    
+    .yacht-fleet-data-text p {
+        font-size: 14.5px;
+    }
+    
+    .yacht-fleet-data-distinction {
+        width: 2px;
+        height: 15px;
+    }
+    
+    .yacht-fleet-btn {
+        margin-top: 1.8rem;
+    }
+    
+    .yacht-fleet-btn button {
+        border-radius: 5px;
+        padding: 0.15rem 1.5rem;
+        font-size: 19.5px;
+    }
+}
+
+@media (max-width: 685px) {
+    .yacht-fleet-container {
+        padding-bottom: 5rem;
+        gap: 6rem;
+    }
+
+    .yacht-fleet-wrap {
+        flex-direction: column;
+        gap: 6.2rem;
+    }
+    
+    .yacht-fleet-img img {
+        width: 90vw;
+    }
+    
+    .yacht-fleet-details {
+        width: 90vw;
+    }
+    
+    .yacht-fleet-details-name {
+        font-size: 13.5px;
+    }
+    
+    .yacht-fleet-details-data {
+        padding: 0rem 0.8rem;
+    }
+    
+    .yacht-fleet-data {
+        gap: 0.5rem;
+    }
+    
+    .yacht-fleet-data i {
+        font-size: 14px;
+    }
+    
+    .yacht-fleet-data-text {
+        gap: 0.2rem;
+    }
+    
+    .yacht-fleet-data-text h4 {
+        font-size: 13.5px;
+    }
+    
+    .yacht-fleet-data-text p {
+        font-size: 15px;
+    }
+    
+    .yacht-fleet-btn {
+        margin-top: 1.5rem;
+    }
+    
+    .yacht-fleet-btn button {
+        border-radius: 5px;
+        padding: 0.15rem 1.5rem;
+        font-size: 20px;
+    }
+}
+
+/* Jet Ski Rentals */
+
+.jetski-rental {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: 1s all ease;
+    margin: 7rem 0rem 0rem 0rem;
+    padding: 7rem 0rem 4rem 0rem;
+    background-image: linear-gradient(180deg, rgb(50, 50, 50), rgb(202, 202, 202));
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.jetski-rental-reveal {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.jetski-rental-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+}
+
+.jetski-rental-img img {
+    width: 40vw;
+}
+
+.jetski-rental-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    width: 40vw;
+}
+
+.jetski-rental-text-h2 {
+    width: 40vw;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 25px;
+    text-align: center;
+    color: #043632;
+    margin: 0px auto;
+}
+
+.jetski-rental-text-p {
+    width: 40vw;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+@media (max-width: 1150px) {
+    .jetski-rental {
+        margin: 7rem 0rem 0rem 0rem;
+        padding: 4.5rem 0rem 4rem 0rem;
+    }
+    
+    .jetski-rental-img {
+        width: 40vw;
+    }
+    
+    .jetski-rental-img img {
+        width: 40vw;
+    }
+    
+    .jetski-rental-text {
+        gap: 1rem;
+        width: 45vw;
+    }
+    
+    .jetski-rental-text-h2 {
+        width: 45vw;
+        font-size: 22px;
+    }
+    
+    .jetski-rental-text-p {
+        width: 45vw;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 685px) {
+    .jetski-rental {
+        margin: 4rem 0rem 0rem 0rem;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 0rem 4rem 0rem;
+    }
+    
+    .jetski-rental-img {
+        width: 90vw;
+    }
+    
+    .jetski-rental-img img {
+        width: 90vw;
+    }
+    
+    .jetski-rental-text {
+        width: 90vw;
+    }
+    
+    .jetski-rental-text-h2 {
+        width: 90vw;
+        font-size: 20px;
+    }
+    
+    .jetski-rental-text-p {
+        width: 90vw;
+        font-size: 21px;
+    }
+}
+
+/* Footer */
+footer {
+    background-image: linear-gradient(180deg, rgb(202, 202, 202), #087168, #06524b, #043632, #043632);
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 7.5rem 0rem 2rem 2rem;
+    color: white;
+}
+.footer-hr {
+    display: none;
+}
+.footer-top {
+    display: flex;
+    justify-content: space-evenly;
+}
+.foot-top-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+}
+.footer-top-h3 {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 23px;
+    color: rgba(192, 192, 192, 0.916);
+}
+.footer-top-newsletter-social-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.footer-top-newsletter-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.footer-top-p {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 23px;
+}
+.footer-top-social {
+    display: flex;
+    gap: 2rem;
+}
+.footer-top-social-icon i {
+    font-size: 30.5px;
+    color: black;
+    cursor: pointer;
+}
+.footer-top-email-input {
+    padding: 0px 15px;
+    width: 500px;
+    height: 59px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 9px;
+}
+
+.email-input input {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+    padding: 0px;
+    outline: none;
+    border: none;
+    width: 420px;
+    height: 50px;
+    background-color: transparent;
+    color: whitesmoke;
+}
+::-webkit-input-placeholder {
+    color: rgb(214, 214, 214);
+}
+.email-input-icon {
+    background-color: transparent;
+    border: none;
+}
+.email-input-icon i {
+    font-size: 23.5px;
+    color: black;
+    cursor: pointer;
+}
+.footer-top-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.footer-top-contact-info-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+}
+.footer-top-contact-info-content {
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
+    align-items: center;
+}
+.footer-top-contact-info-icon i {
+    cursor: pointer;
+    font-size: 20.5px;
+    color: rgba(202, 202, 202, 0.855);
+}
+.contact-info-p {
+    cursor: pointer;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 21px;
+}
+
+.contact-info-p a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.footer-base {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 21px;
+}
+.footer-base-link {
+    display: flex;
+    gap: 1.5rem;
+}
+.footer-base-para p {
+    cursor: pointer;
+}
+.footer-base-para-divider {
+    width: 2px;
+    height: 25px;
+    border: none;
+    background-color: grey;
+}
+
+@media (max-width: 1150px) {
+    footer {
+        margin-top: 0rem;
+        gap: 3rem;
+        padding: 7rem 0rem 2.5rem 0rem;
+    }
+    .footer-hr {
+        width: 90vw;
+        height: 0.8px;
+        margin-bottom: 0.8rem;
+    }
+    .footer-top {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .foot-top-wrap {
+        gap: 1.3rem;
+    }
+    .footer-top-h3 {
+        font-size: 22px;
+    }
+    .footer-top-newsletter-social-container {
+        gap: 1rem;
+    }
+    .footer-top-newsletter-social {
+        flex-direction: column-reverse;
+        gap: 1.3rem;
+        justify-content: start;
+        align-items: flex-start;
+    }
+    .footer-top-p {
+        width: 280px;
+        font-size: 21px;
+    }
+    .footer-top-social {
+        gap: 2rem;
+    }
+    .footer-top-social-icon i {
+        font-size: 26px;
+    }
+    .footer-top-email-input {
+        padding: 0px 15px;
+        width: 300px;
+        height: 45px;
+        border: 0.5px solid black;
+        border-radius: 9px;
+    }
+    .email-input input {
+        font-size: 21px;
+        width: 240px;
+        height: 40px;
+    }
+    .email-input-icon i {
+        font-size: 20px;
+    }
+    .footer-top-contact-info {
+        gap: 1.5rem;
+    }
+    .footer-top-contact-info-wrap {
+        gap: 1.3rem;
+    }
+    .footer-top-contact-info-content {
+        gap: 0.8rem;
+    }
+    .footer-top-contact-info-icon i {
+        font-size: 20px;
+    }
+    .contact-info-p {
+        font-size: 20px;
+    }
+    .footer-base {
+        gap: 1rem;
+        font-size: 20px;
+    }
+    .footer-base-link {
+        gap: 0.8rem;
+    }
+    .footer-base-para-divider {
+        width: 2px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 685px) {
+    footer {
+        margin-top: 0rem;
+        gap: 2.5rem;
+        padding: 10.5rem 1rem 1.5rem 1rem;
+    }
+
+    .footer-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 2.5rem;
+    }
+    .foot-top-wrap {
+        gap: 2rem;
+    }
+    .footer-top-h3 {
+        font-size: 20px;
+    }
+    .footer-top-newsletter-social-container {
+        gap: 0.5rem;
+    }
+    .footer-top-newsletter-social {
+        gap: 1.5rem;
+        justify-content: start;
+        align-items: flex-start;
+    }
+    .footer-top-p {
+        max-width: 90vw;
+        font-size: 20px;
+    }
+    .footer-top-social {
+        gap: 3rem;
+    }
+    .footer-top-social-icon i {
+        font-size: 24px;
+    }
+    .footer-top-email-input {
+        padding: 0px 13px;
+        width: 280px;
+        height: 40px;
+        border: 0.4px solid black;
+    }
+    .email-input input {
+        font-size: 19px;
+        width: 220px;
+        height: 35px;
+    }
+    .email-input-icon i {
+        font-size: 18px;
+    }
+    .footer-top-contact-info {
+        gap: 2rem;
+        justify-content: center;
+    }
+    .footer-top-contact-info-wrap {
+        max-width: 80vw;
+        gap: 1rem;
+    }
+    .footer-top-contact-info-content {
+        gap: 0.5rem;
+    }
+    .footer-top-contact-info-icon i {
+        font-size: 16px;
+    }
+    .contact-info-p {
+        font-size: 20px;
+    }
+    .footer-base {
+        gap: 1rem;
+        font-size: 18px;
+    }
+    .footer-base-link {
+        width: 90vw;
+        gap: 0.5rem;
+    }
+    .footer-base-para{
+        justify-content: start;
+        align-items: flex-start;
+    }
+    .footer-base-para-divider {
+        width: 2px;
+        height: 18px;
+    }
+}
