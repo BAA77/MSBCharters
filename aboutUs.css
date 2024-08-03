@@ -91,7 +91,8 @@ header {
     flex-direction: column;
 }
 
-.header-wrap .phone {
+.header-wrap .phone a {
+    text-decoration: none;
     width: 50vw;
     display: flex;
     gap: 1rem;
@@ -216,7 +217,7 @@ header {
         height: 57px;
     }
 
-    .header-wrap .phone {
+    .header-wrap .phone a {
         width: 40vw;
         gap: 0.5rem;
         font-size: 17px;
@@ -254,7 +255,7 @@ header {
         min-width: 60px;
     }
 
-    .header-wrap .phone {
+    .header-wrap .phone a {
         color: rgb(202, 202, 202);
         width: auto;
         gap: 0.3rem;
