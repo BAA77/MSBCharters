@@ -785,9 +785,18 @@ header {
 
 /* Client Experience */
 
-.meet-team-wrap {
+.meet-team {
     margin-bottom: 1rem;
-    padding: 7rem 0rem 7rem 0rem;
+    padding: 0rem 0rem 7rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.meet-team-wrap {
+    padding-top: 7rem;
     background-image: linear-gradient(180deg, #043632, rgb(90, 90, 90), rgb(202, 202, 202));
     width: 100%;
     display: flex;
@@ -836,9 +845,34 @@ header {
     width: 40vw;
 }
 
+.rent-yacht-btn a {
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    color: rgb(202, 202, 202);
+    background: #043632;
+    width: auto;
+    height: auto;
+    padding: 0.4rem 4rem;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.77);
+    border-radius: 7px;
+}
+
+.rent-yacht-btn a:hover {
+    background: #086059;
+}
+
 @media (max-width: 1150px) {
+    .meet-team {
+        padding: 0rem 0rem 4rem 0rem;
+        gap: 3.5rem;
+    }
+
     .meet-team-wrap {
-        padding: 5rem 0rem 4rem 0rem;
+        padding-top: 5rem;
     }
     
     .meet-team-text {
@@ -863,12 +897,23 @@ header {
     .meet-team-img img {
         width: 40vw;
     }
+
+    .rent-yacht-btn a {
+        font-size: 21px;
+        padding: 0.25rem 2rem;
+    }
 }
 
 @media (max-width: 685px) {
+    .meet-team {
+        margin-top: 3.5rem;
+        padding: 0rem 0rem 3rem 0rem;
+        gap: 2.5rem;
+    }
+
     .meet-team-wrap {
         margin-top: 3.5rem;
-        padding: 3rem 0rem 3rem 0rem;
+        padding-top: 3rem;
         flex-direction: column;
         gap: 2rem;
         justify-content: center;
@@ -895,6 +940,10 @@ header {
     
     .meet-team-img img {
         width: 90vw;
+    }
+
+    .rent-yacht-btn a {
+        font-size: 20px;
     }
 }
 
