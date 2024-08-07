@@ -323,23 +323,20 @@ header {
 }
 
 /* Landing page visuals */
+.background-vid {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .landing-page-visuals-wrap {
     color: rgb(215, 215, 215);
     background-image: linear-gradient(90deg, whitesmoke, #043632);
     height: 100vh;
     padding-top: 23vh;
-}
-
-.background-img {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100vh;
-    background: url(msbCharterImg/Background\ Img.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 .landing-page-visuals-content {
@@ -385,7 +382,7 @@ header {
     font-style: normal;
     font-size: 20px;
     text-shadow: 0.1px 0.1px 1px black;
-    color: rgba(245, 222, 179, 0.700);
+    color: black;
     border-radius: 15px;
     background-color: white;
     -webkit-backdrop-filter: blur(20px);
