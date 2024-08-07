@@ -330,11 +330,12 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -7;
 }
 
 .landing-page-visuals-wrap {
     color: rgb(215, 215, 215);
-    background-image: linear-gradient(90deg, whitesmoke, #043632);
+    background-image: linear-gradient(90deg, rgba(245, 245, 245, 0.087), #04363283);
     height: 100vh;
     padding-top: 23vh;
 }
